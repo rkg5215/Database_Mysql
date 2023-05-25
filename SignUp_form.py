@@ -60,7 +60,7 @@ def remove():
     if (result > 0):  # Python understand 0 false 1 for true--
         messagebox.showinfo("Welcome", "User Deleted Successfully")
     else:
-        messagebox.showwarning("Welcome", "Enter the Correct Username")
+        messagebox.showwarning("Welcome", "Enter the Correct First Name")
     db.commit()
     e1.delete(0, END)
 
@@ -106,7 +106,7 @@ e5.place(x=550, y=365)
 l6 = Label(top, text="Password :", fg='black', bg='white', font=("Arial 20 bold"))
 l6.place(x=250, y=425)
 
-e6 = Entry(top, font=("Arial 20 bold"))
+e6 = Entry(top, font=("Arial 20 bold"),show="*")
 e6.place(x=550, y=425)
 
 l7 = Label(top, text="Verify Password :", fg='black', bg='white', font=("Arial 20 bold"))
