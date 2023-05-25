@@ -6,7 +6,7 @@ from PIL import ImageTk, Image
 top = Tk()
 top.geometry('1000x600')
 top.title("SIGN IN")
-
+# G
 def login():
     import pymysql as c
     db = c.connect(host="localhost",
