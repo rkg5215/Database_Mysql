@@ -1,12 +1,15 @@
 # ----- SIGN UP/Registration tkinter form------
 from tkinter import *
+import tkinter
 import os
 from tkinter import messagebox
 from PIL import ImageTk, Image
 
 top = Tk()
-top.geometry('1000x700')
+# top.geometry('1000x700')
 top.title("SIGN UP")
+# f1= tkinter.Frame(top)
+# f1.pack()
 
 def login():
     top.destroy()
@@ -21,6 +24,7 @@ def insert():
     k5 = str(e5.get())
     k6 = str(e6.get())
     k7 = str(e7.get())
+    k8 = str(e7.get())
 
     import pymysql as c
     db = c.connect(host="localhost",
@@ -28,7 +32,7 @@ def insert():
                passwd="Batman",
                database="reg")
     cursor = db.cursor()
-    s = "Insert into user values('{}','{}','{}','{}','{}','{}','{}')".format(k1, k2, k3, k4, k5, k6, k7)
+    s = "Insert into user values('{}','{}','{}','{}','{}','{}','{}','{}')".format(4,k1, k2, k3, k4, k5, k6, k7, k8)
     result= cursor.execute(s)
 
     if (result>0):  # Python understand 0 false 1 for true--

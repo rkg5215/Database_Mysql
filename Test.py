@@ -3,12 +3,14 @@ import os
 top=Tk()
 top.geometry('1000x600')
 top.title("Welcome To dashboard")
+scrollbar = Scrollbar(top)
+scrollbar.pack( side = RIGHT, fill = Y )
 
-def login():
-    top.destroy()
-    os.system("SIGN_IN.py")
 
-l1=Label(top,text='''hello jnakjfdhkjfdksjkhshknkfnkjsjfhisuSkip to main contentTurn off continuous scrolling
+
+
+
+l1=Label(top ,text='''hello jnakjfdhkjfdksjkhshknkfnkjsjfhisuSkip to main contentTurn off continuous scrolling
 Accessibility help
 Accessibility feedback
 Google
@@ -134,8 +136,15 @@ Next
 India
 Ghaziabad, Uttar Pradesh - Based on your past activity
  - Update location
-HelpSend feedbackPrivacyTerms''',bg='orange')
-l1.pack()
+HelpSend feedbackPrivacyTerms''',bg='orange', yscrollcommand = scrollbar.set)
+
+
+l1.pack( side = LEFT, fill = BOTH )
+
+scrollbar.config( command = l1.yview )
+
+
+
 
 
 top.mainloop()

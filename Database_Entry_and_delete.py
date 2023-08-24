@@ -46,10 +46,10 @@ def delete():
     db.commit()
 
 # ---For image Import------
-path = "E:/img1.jpg"
-img = ImageTk.PhotoImage(Image.open(path))
-l6 = Label(top, image=img)
-l6.pack()
+# path = "E:/img1.jpg"
+# img = ImageTk.PhotoImage(Image.open(path))
+# l6 = Label(top, image=img)
+# l6.pack()
 
 l1 = Label(top, text="ID:", fg='black', bg='white', font=("Arial 25 bold"))
 l1.place(x=450, y=200)

@@ -45,7 +45,7 @@ e1.place(x=550, y=250)
 l2 = Label(top, text="Password :", fg='black', bg='white', font=("Arial 25 bold"))
 l2.place(x=350, y=350)
 
-e2 = Entry(top, font=("Arial 25 bold"))
+e2 = Entry(top, font=("Arial 25 bold"),show="*")
 e2.place(x=550, y=350)
 
 
